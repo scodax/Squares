@@ -10,15 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="78f8378a-88d6-4be5-ae58-874804cd344a" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/scodax/squares/model/Cell.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/scodax/squares/model/CellColor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/scodax/squares/controller/SquareController.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/by/scodax/squares/controller/ZoomTask.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/scodax/squares/GameRenderer.java" afterPath="$PROJECT_DIR$/src/by/scodax/squares/GameRenderer.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/scodax/squares/GameScreen.java" afterPath="$PROJECT_DIR$/src/by/scodax/squares/GameScreen.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/scodax/squares/GameWorld.java" afterPath="$PROJECT_DIR$/src/by/scodax/squares/GameWorld.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/scodax/squares/helpers/InputHandler.java" afterPath="$PROJECT_DIR$/src/by/scodax/squares/helpers/InputHandler.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/by/scodax/squares/model/Cell.java" afterPath="$PROJECT_DIR$/src/by/scodax/squares/model/Cell.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Squares.iws" />
@@ -135,28 +127,28 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Cell.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Cell.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/by/scodax/squares/model/Cell.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="23" column="16" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
+            <state line="32" column="45" selection-start="494" selection-end="494" vertical-scroll-proportion="0.55909556" vertical-offset="0" max-vertical-offset="973">
               <folding>
-                <element signature="e#208#209#0" expanded="true" />
-                <element signature="e#236#237#0" expanded="true" />
-                <element signature="e#281#282#0" expanded="true" />
-                <element signature="e#315#316#0" expanded="true" />
-                <element signature="e#345#346#0" expanded="true" />
-                <element signature="e#372#373#0" expanded="true" />
-                <element signature="e#411#412#0" expanded="true" />
-                <element signature="e#443#444#0" expanded="true" />
+                <element signature="e#209#210#0" expanded="true" />
+                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#282#283#0" expanded="true" />
+                <element signature="e#316#317#0" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#373#374#0" expanded="true" />
+                <element signature="e#412#413#0" expanded="true" />
+                <element signature="e#444#445#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SquareController.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SquareController.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/by/scodax/squares/controller/SquareController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="54" column="116" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.7268446" vertical-offset="455" max-vertical-offset="1428">
+            <state line="26" column="13" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1012#1013#0" expanded="true" />
@@ -233,10 +225,10 @@
         <option value="$PROJECT_DIR$/src/by/scodax/squares/model/CellColor.java" />
         <option value="$PROJECT_DIR$/src/by/scodax/squares/helpers/InputHandler.java" />
         <option value="$PROJECT_DIR$/src/by/scodax/squares/GameWorld.java" />
-        <option value="$PROJECT_DIR$/src/by/scodax/squares/model/Cell.java" />
         <option value="$PROJECT_DIR$/src/by/scodax/squares/controller/ZoomTask.java" />
         <option value="$PROJECT_DIR$/src/by/scodax/squares/GameRenderer.java" />
         <option value="$PROJECT_DIR$/src/by/scodax/squares/controller/SquareController.java" />
+        <option value="$PROJECT_DIR$/src/by/scodax/squares/model/Cell.java" />
       </list>
     </option>
   </component>
@@ -770,15 +762,19 @@
       <created>1400070087418</created>
       <updated>1400070087418</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Initial commit&#10;">
+      <created>1400078189080</created>
+      <updated>1400078189080</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-4" y="-4" width="1608" height="1164" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32941177" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
@@ -815,6 +811,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <option name="myTodoPanelSettings">
       <TodoPanelSettings />
     </option>
@@ -925,22 +923,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/by/scodax/squares/model/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="16" selection-start="391" selection-end="391" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="561">
-          <folding>
-            <element signature="e#208#209#0" expanded="true" />
-            <element signature="e#236#237#0" expanded="true" />
-            <element signature="e#281#282#0" expanded="true" />
-            <element signature="e#315#316#0" expanded="true" />
-            <element signature="e#345#346#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#411#412#0" expanded="true" />
-            <element signature="e#443#444#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/by/scodax/squares/GameRenderer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="77" column="17" selection-start="2101" selection-end="2101" vertical-scroll-proportion="0.0" vertical-offset="965" max-vertical-offset="2550">
@@ -978,7 +960,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/by/scodax/squares/controller/SquareController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="54" column="116" selection-start="1264" selection-end="1264" vertical-scroll-proportion="0.7268446" vertical-offset="455" max-vertical-offset="1428">
+        <state line="26" column="13" selection-start="707" selection-end="707" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1428">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1012#1013#0" expanded="true" />
@@ -993,6 +975,22 @@
             <element signature="e#1262#1263#0" expanded="true" />
             <element signature="e#1298#1299#0" expanded="true" />
             <element signature="e#1327#1328#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/by/scodax/squares/model/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="45" selection-start="494" selection-end="494" vertical-scroll-proportion="0.55909556" vertical-offset="0" max-vertical-offset="973">
+          <folding>
+            <element signature="e#209#210#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#282#283#0" expanded="true" />
+            <element signature="e#316#317#0" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#373#374#0" expanded="true" />
+            <element signature="e#412#413#0" expanded="true" />
+            <element signature="e#444#445#0" expanded="true" />
           </folding>
         </state>
       </provider>

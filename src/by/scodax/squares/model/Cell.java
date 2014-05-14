@@ -6,6 +6,7 @@ package by.scodax.squares.model;
  * Time: 15:35
  */
 public class Cell {
+
     private CellColor color;
     private float zoom = 1;
 
@@ -23,5 +24,9 @@ public class Cell {
 
     public void setZoom(float zoom) {
         this.zoom = zoom;
+    }
+
+    public void update(float delta) {
+
     }
 }
