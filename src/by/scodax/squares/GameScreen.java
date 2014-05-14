@@ -1,5 +1,6 @@
 package by.scodax.squares;
 
+import by.scodax.squares.controller.SquareController;
 import by.scodax.squares.helpers.InputHandler;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputMultiplexer;
@@ -20,12 +21,13 @@ public class GameScreen implements Screen {
         float gameWidth = 480;
         float gameHeight = screenHeight / (screenWidth / gameWidth);
 
-        world = new GameWorld();
-        InputHandler inputHandler = new InputHandler(world, screenWidth / gameWidth, screenHeight / gameHeight);
+        SquareController squareController = new SquareController();
+        world = new GameWorld(squareController);
+        InputHandler inputHandler = new InputHandler(world, screenWidth / gameWidth, screenHeight / gameHeight, squareController);
         Gdx.input.setInputProcessor(new InputMultiplexer(new GestureDetector(20, 0.5f, 2, 0.15f, inputHandler), inputHandler));
         Gdx.input.setCatchBackKey(true);
 
-        renderer = new GameRenderer(world, (int) gameHeight, inputHandler);
+        renderer = new GameRenderer(world, (int) gameHeight, inputHandler, squareController);
         world.setRenderer(renderer);
     }
 

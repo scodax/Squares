@@ -1,10 +1,12 @@
 package by.scodax.squares.helpers;
 
 import by.scodax.squares.GameWorld;
+import by.scodax.squares.controller.SquareController;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.InputProcessor;
 import com.badlogic.gdx.input.GestureDetector;
+import com.badlogic.gdx.math.Rectangle;
 import com.badlogic.gdx.math.Vector2;
 
 import java.util.ArrayList;
@@ -19,13 +21,17 @@ public class InputHandler implements GestureDetector.GestureListener, InputProce
 
     private float scaleFactorX;
     private float scaleFactorY;
+    private final SquareController squareController;
+
 
     public InputHandler(GameWorld myWorld, float scaleFactorX,
-                        float scaleFactorY) {
+                        float scaleFactorY, SquareController squareController) {
         this.myWorld = myWorld;
 
         this.scaleFactorX = scaleFactorX;
         this.scaleFactorY = scaleFactorY;
+        this.squareController = squareController;
+
     }
 
 
@@ -41,6 +47,9 @@ public class InputHandler implements GestureDetector.GestureListener, InputProce
     public boolean touchDown(float v, float v2, int i, int i2) {
         float x = v / scaleFactorX;
         float y = v2 / scaleFactorY;
+        if (squareController.getBounds().contains(x, y)) {
+            squareController.handleTouch(x, y);
+        }
         return false;
     }
 

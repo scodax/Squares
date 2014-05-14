@@ -3,7 +3,9 @@ package by.scodax.squares;
 import aurelienribon.tweenengine.Tween;
 import aurelienribon.tweenengine.TweenEquations;
 import aurelienribon.tweenengine.TweenManager;
+import by.scodax.squares.controller.SquareController;
 import by.scodax.squares.helpers.*;
+import by.scodax.squares.model.Cell;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
@@ -24,8 +26,12 @@ import java.util.List;
 public class GameRenderer {
 
 
+    private static final int CELL_SIZE = 37;
+    private static final float CORNER_RADIUS = 4.0f;
+
     private final Color transitionColor;
     private GameWorld myWorld;
+    private final SquareController squareController;
     private OrthographicCamera cam;
     private ShapeRenderer shapeRenderer;
 
@@ -40,8 +46,9 @@ public class GameRenderer {
     private TweenManager manager;
 
 
-    public GameRenderer(GameWorld world, int gameHeight, InputHandler inputHandler) {
+    public GameRenderer(GameWorld world, int gameHeight, InputHandler inputHandler, SquareController squareController) {
         myWorld = world;
+        this.squareController = squareController;
 
         cam = new OrthographicCamera();
         cam.setToOrtho(true, 480, gameHeight);
@@ -84,9 +91,43 @@ public class GameRenderer {
         batcher.begin();
         batcher.enableBlending();
 
-        batcher.draw(field, 40, 300, 400, 400);
+        batcher.draw(field, squareController.getX(), squareController.getY(), squareController.getWidth(), squareController.getHeight());
 
         batcher.end();
+
+        Gdx.gl.glEnable(GL20.GL_BLEND);
+        Gdx.gl.glBlendFunc(GL20.GL_SRC_ALPHA, GL20.GL_ONE_MINUS_SRC_ALPHA);
+        Cell[][] cells = squareController.getCells();
+        for (int i = 0; i < cells.length; i++) {
+            Cell[] row = cells[i];
+            for (int j = 0; j < row.length; j++) {
+                Cell cell = row[j];
+
+                float zoomDelta = (cell.getZoom() * CELL_SIZE - CELL_SIZE) / 2;
+                float x = squareController.getX() + 2 + i * (CELL_SIZE + 2) - zoomDelta;
+                float y = squareController.getY() + 2 + j * (CELL_SIZE + 2) - zoomDelta;
+                float size = CELL_SIZE * cell.getZoom();
+
+//                float x = squareController.getX() + 2 + i * (CELL_SIZE + 2);
+//                float y = squareController.getY() + 2 + j * (CELL_SIZE + 2);
+//                float size = CELL_SIZE;
+                shapeRenderer.begin(ShapeRenderer.ShapeType.Filled);
+                shapeRenderer.setProjectionMatrix(cam.combined);
+                shapeRenderer.setColor(cell.getColor().getColor());
+                shapeRenderer.getColor().a = 0.7f;
+                shapeRenderer.rect(x + CORNER_RADIUS, y, size - CORNER_RADIUS * 2, size);
+                shapeRenderer.rect(x, y + CORNER_RADIUS, CORNER_RADIUS, size - CORNER_RADIUS * 2);
+                shapeRenderer.rect(x + size - CORNER_RADIUS, y + CORNER_RADIUS, CORNER_RADIUS, size - CORNER_RADIUS * 2);
+
+                shapeRenderer.arc(x + CORNER_RADIUS, y + CORNER_RADIUS, CORNER_RADIUS, 180, 90);
+                shapeRenderer.arc(x + CORNER_RADIUS, y + size - CORNER_RADIUS, CORNER_RADIUS, 90, 90);
+                shapeRenderer.arc(x + size - CORNER_RADIUS, y + CORNER_RADIUS, CORNER_RADIUS, 270, 90);
+                shapeRenderer.arc(x + size - CORNER_RADIUS, y + size - CORNER_RADIUS, CORNER_RADIUS, 0, 90);
+
+                shapeRenderer.end();
+            }
+        }
+        Gdx.gl.glDisable(GL20.GL_BLEND);
 
     }
 

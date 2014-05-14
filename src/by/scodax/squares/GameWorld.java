@@ -1,5 +1,7 @@
 package by.scodax.squares;
 
+import by.scodax.squares.controller.SquareController;
+
 /**
  * User: Administrator
  * Date: 24.04.14
@@ -7,6 +9,7 @@ package by.scodax.squares;
  */
 public class GameWorld {
 
+    private final SquareController squareController;
     private GameRenderer renderer;
 
     private GameState currentState;
@@ -31,7 +34,8 @@ public class GameWorld {
         RUNNING, IS_RESTART, GAMEOVER, EXIT
     }
 
-    public GameWorld() {
+    public GameWorld(SquareController squareController) {
+        this.squareController = squareController;
         this.currentState = GameState.RUNNING;
     }
 
@@ -57,9 +61,10 @@ public class GameWorld {
     }
 
     public void updateRunning(float delta) {
-        if (delta > .15f) {
-            delta = .15f;
-        }
+//        if (delta > .15f) {
+//            delta = .15f;
+//        }
+        squareController.update(delta);
     }
 
     public boolean isRestart() {
