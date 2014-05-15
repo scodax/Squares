@@ -12,7 +12,10 @@ import java.util.Random;
  * Time: 15:37
  */
 public class SquareController {
-    private final Cell[][] cells = new Cell[10][10];
+
+    public static final int CELL_SIZE = 48;
+
+    private final Cell[][] cells = new Cell[8][8];
     private final Random random = new Random();
     private float x = 44;
     private float y = 300;
@@ -58,8 +61,8 @@ public class SquareController {
     }
 
     public void handleTouch(float x, float y) {
-        int i = (int) ((width - (this.x - x)) / 39) - 10;
-        int j = (int) ((height - (this.y - y)) / 39) - 10;
+        int i = Math.min((int) ((width - (this.x - x)) / CELL_SIZE) - 8, 7);
+        int j = Math.min((int) ((height - (this.y - y)) / CELL_SIZE) - 8, 7);
         setZoomTask(new ZoomTask(cells[i][j]));
         System.out.println("----------------------------------" + i + " : " + j + "---------------------");
     }

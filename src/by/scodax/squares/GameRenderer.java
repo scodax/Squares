@@ -18,6 +18,8 @@ import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 
 import java.util.List;
 
+import static by.scodax.squares.controller.SquareController.CELL_SIZE;
+
 /**
  * User: Administrator
  * Date: 24.04.14
@@ -26,7 +28,7 @@ import java.util.List;
 public class GameRenderer {
 
 
-    private static final int CELL_SIZE = 37;
+
     private static final float CORNER_RADIUS = 4.0f;
 
     private final Color transitionColor;
